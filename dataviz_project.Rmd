@@ -1,6 +1,6 @@
 ---
 title: "Data Visualization Project"
-author: "Jane Doe"
+author: "Mohammad Hadavand"
 date: "6/19/2018"
 output: html_document
 ---
@@ -43,15 +43,35 @@ pets <- read.csv("data/raw_data/seattle_pet_licenses.csv", stringsAsFactors = FA
 ```{r pet-explore, warning=FALSE} 
 ## Include code here to explore the data 
 ## and answer the questions in the exercise
-```
+sum(pets$license_number)
+`sum(licenses)
+any(pets$species)
+all(pets$species)
+mean(pets$species)
+class(pets$species)
+count(pets$animal_s_name)
+count(pets$animal_s_name)
+group_by(pets$animal_s_name)
+sum(pets$license_number)
+length(pets$license_number)
+sum(pets$species)
+which(pets$species)
+typeof(pets$species)
+print(pets$species)
+mean(pets$species)
+ls(pets$species)
+str(pets$species)
+subset(iris$species)
 
 ## Visualize the Data
 
 ```{r pet-barchart, warning=FALSE} 
 ## visual breakdown of how many of each species 
 ## are included in the dataset
-ggplot(DATASET) +
-  geom_bar(aes(x=VARIABLE))
+ggplot(pets) +
+  geom_bar(aes(x = speciesname , y = Numbers))
+
+
 ```
 
 ```{r pet-cat-table, warning=FALSE} 
